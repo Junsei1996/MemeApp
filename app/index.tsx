@@ -7,7 +7,7 @@ export default function Index() {
 
   useEffect(() => {
     setTimeout(() => {
-      router.replace("/UserProfile")
+      router.replace("/MemeDetail")
     }, 3000); // 3000ms = 3 seconds
   }, []);
 

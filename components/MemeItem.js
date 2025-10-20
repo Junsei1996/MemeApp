@@ -8,7 +8,7 @@ import {
   View,
 } from "react-native";
 
-function MemeItem({ meme }) {
+function MemeItem({ meme, on_click }) {
   const [imageHeight, setImageHeight] = useState(200); // fallback height
   const screenWidth = Dimensions.get("window").width;
   const horizontalPadding = 16 * 2;
@@ -25,7 +25,7 @@ function MemeItem({ meme }) {
   }, [meme.imageLink]);
 
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={on_click}>
       <View style={styles.titleContainer}>
         <Text style={styles.titleStyle}>{meme.title}</Text>
         <View style={styles.userImageContainer}>
@@ -101,7 +101,7 @@ function MemeItem({ meme }) {
           />
         </TouchableOpacity>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 

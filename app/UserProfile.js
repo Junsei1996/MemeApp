@@ -1,10 +1,10 @@
 import {
-    Image,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 
 function UserProfile() {
@@ -19,12 +19,12 @@ function UserProfile() {
             justifyContent: "space-evenly",
           }}
         >
-          <View style={{ width: 100, height: 100, borderRadius: 50 }}>
+          <View style={{ width: 150, height: 150, borderRadius: 75 }}>
             <Image
               source={{
                 uri: "https://i.pinimg.com/736x/4e/0d/7e/4e0d7e9b5e0f542fd4f68715554f1c98.jpg",
               }}
-              style={{ width: 100, height: 100, borderRadius: 50 }}
+              style={{ width: 150, height: 150, borderRadius: 75 }}
             />
           </View>
           <Text style={{ fontFamily: "poppins_medium", fontSize: 22 }}>
@@ -101,8 +101,8 @@ function UserProfile() {
               marginHorizontal: 16,
               borderRadius: 8,
               flexDirection: "row",
-                justifyContent: "space-between",    
-                alignItems: "center",
+              justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
             <Text
@@ -114,12 +114,13 @@ function UserProfile() {
             >
               Posts
             </Text>
-            <Image style={{ width: 40, height: 20, resizeMode: "contain" }}
-            source={require("../assets/images/right_arrow.png")} />
+            <Image
+              style={{ width: 40, height: 20, resizeMode: "contain" }}
+              source={require("../assets/images/right_arrow.png")}
+            />
           </TouchableOpacity>
 
-
-<TouchableOpacity
+          <TouchableOpacity
             style={{
               padding: 16,
               backgroundColor: "#ccc",
@@ -127,8 +128,62 @@ function UserProfile() {
               marginHorizontal: 16,
               borderRadius: 8,
               flexDirection: "row",
-                justifyContent: "space-between",    
-                alignItems: "center",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <Text
+              style={{
+                fontFamily: "poppins_medium",
+                fontSize: 16,
+                color: "#000",
+              }}
+            >
+              Likes
+            </Text>
+            <Image
+              style={{ width: 40, height: 20, resizeMode: "contain" }}
+              source={require("../assets/images/right_arrow.png")}
+            />
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={{
+              padding: 16,
+              backgroundColor: "#ccc",
+              marginTop: 10,
+              marginHorizontal: 16,
+              borderRadius: 8,
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <Text
+              style={{
+                fontFamily: "poppins_medium",
+                fontSize: 16,
+                color: "#000",
+              }}
+            >
+              Comments
+            </Text>
+            <Image
+              style={{ width: 40, height: 20, resizeMode: "contain" }}
+              source={require("../assets/images/right_arrow.png")}
+            />
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={{
+              padding: 16,
+              backgroundColor: "#ccc",
+              marginTop: 10,
+              marginHorizontal: 16,
+              borderRadius: 8,
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
             <Text
@@ -140,10 +195,11 @@ function UserProfile() {
             >
               Logout
             </Text>
-            <Image style={{ width: 40, height: 20, resizeMode: "contain" }}
-            source={require("../assets/images/right_arrow.png")} />
+            <Image
+              style={{ width: 40, height: 20, resizeMode: "contain" }}
+              source={require("../assets/images/right_arrow.png")}
+            />
           </TouchableOpacity>
-
         </View>
       </ScrollView>
     </View>
